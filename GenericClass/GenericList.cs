@@ -21,7 +21,7 @@ namespace GenericClass
 
         public T getItem(int index)
         {
-            return list.ElementAt(index);
+            return list.ElementAtOrDefault(index);
         }
     }
 }
