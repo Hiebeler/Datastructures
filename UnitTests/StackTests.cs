@@ -6,15 +6,12 @@ namespace UnitTests
     public class Tests
     {
         [Test]
-        public void TestStack()
+        public void TestStackSize_AddItems_ReturnsCorrectStackSize()
         {
             CustomStack<string> stack = new CustomStack<string>();
-            stack.push("halloo");
-            stack.push("moin");
-            stack.push("servus");
-            stack.push("guten Tag");
-            stack.pop();
-            Assert.IsTrue(stack.size() == 3);
+            Assert.AreEqual(stack.Size(), 0);
+            stack.Push("halloo");
+            Assert.AreEqual(stack.Size(), 1);
         }
     }
 }

@@ -6,31 +6,23 @@ using System.Threading.Tasks;
 
 namespace Stack
 {
-    public class CustomStack<T>
+    internal class CustomStack<T>
     {
-        private Node<T> _lastNode;
+        List<T> list = new List<T>();
 
-        public void push(T value)
+        public void push(T item)
         {
-            _lastNode = new Node<T>(value, _lastNode);
+            list.Add(item);
         }
 
         public void pop()
         {
-            _lastNode = _lastNode.previousNode;
+            list.RemoveAt(list.Count - 1);
         }
 
         public int size()
         {
-            Node<T> test = _lastNode;
-            int i = 0;
-            while (test != null)
-            {
-                i++;
-                test = test.previousNode;
-            }
-
-            return i;
+            return list.Count();
         }
     }
 }
