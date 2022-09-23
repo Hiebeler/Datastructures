@@ -6,23 +6,25 @@ using System.Threading.Tasks;
 
 namespace Stack
 {
-    internal class CustomStack<T>
+    public class CustomStack<T>
     {
-        List<T> list = new List<T>();
+   
+            List<Node> list = new List<Node>();
 
-        public void push(T item)
-        {
-            list.Add(item);
-        }
+            public void push(Node item)
+            {
+                list.Add(item);
+            }
 
-        public void pop()
-        {
-            list.RemoveAt(list.Count - 1);
-        }
+            public void pop()
+            {
+                list.RemoveAt(list.Count - 1);
+            }
 
-        public int size()
-        {
-            return list.Count();
-        }
+            public int size()
+            {
+                return list.Count();
+            }
+        
     }
 }

@@ -1,4 +1,4 @@
-﻿using Stack;
+﻿using LinkedQueue;
 
 class Program
 {
