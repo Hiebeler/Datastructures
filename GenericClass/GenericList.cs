@@ -14,9 +14,14 @@ namespace GenericClass
             list.Add(input);
         }
 
-        List<T> getList()
+        public List<T> getList()
         {
             return list;
+        }
+
+        public T getItem(int index)
+        {
+            return list.ElementAt(index);
         }
     }
 }

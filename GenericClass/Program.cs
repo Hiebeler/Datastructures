@@ -2,8 +2,13 @@
 
 GenericList<int> genericListInt = new GenericList<int>();
 genericListInt.Add(1);
-Console.WriteLine(genericListInt);
+genericListInt.Add(5);
+foreach (int item in genericListInt.getList())
+{
+    Console.WriteLine(item);
+}
 
 GenericList<string> genericListString = new GenericList<string>();
 genericListString.Add("hollo");
-Console.WriteLine(genericListString);
+genericListString.Add("moin");
+Console.WriteLine(genericListString.getItem(1));
