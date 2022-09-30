@@ -1,4 +1,4 @@
-using LinkedQueue;
+using System.Linq;
 using NUnit.Framework;
 using Stack;
 
@@ -7,12 +7,18 @@ namespace UnitTests
     public class StackTests
     {
         [Test]
-        public void TestLinkedQueueSize_AddItems_ReturnsCorrectStackSize()
+        public void TestLinkedList_AddItems_ReturnsCorrectList()
         {
-            LinkedQueue<string> stack = new LinkedQueue<string>();
-            Assert.AreEqual(stack.Size(), 0);
-            stack.Push("halloo");
-            Assert.AreEqual(stack.Size(), 1);
+            SingleLinkedList.SingleLinkedList stack = new SingleLinkedList.SingleLinkedList();
+            Assert.AreEqual(stack.Count(), 0);
+            stack.InsertFront("first");
+            stack.InsertLast("last");
+            stack.InsertAt("middle",1);
+            Assert.AreEqual(stack.Count(), 3);
+            Assert.AreEqual(stack.Last(), "last");
+            Assert.AreEqual(stack.First(), "first");
+            stack.DeleteFirst();
+            Assert.AreEqual(stack.First(), "middle");
         }
 
         [Test]

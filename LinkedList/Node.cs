@@ -4,16 +4,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LinkedQueue
+namespace SingleLinkedList
 {
-    internal class Node<T>
+    internal class Node
     {
-        public T Value { get; set; }
-        public Node<T> previousNode;
+        public object Value { get; set; }
+        public Node nextNode;
 
-        public Node(T value, Node<T> _previousNode)
+        public Node(object value)
         {
-            previousNode = _previousNode;
+            nextNode = null;
             Value = value;
         }
     }

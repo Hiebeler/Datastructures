@@ -1,15 +1,20 @@
-﻿using LinkedQueue;
-
-class Program
-{
-    static void Main(string[] args)
+﻿    class Program
     {
-        LinkedQueue<int> stack = new LinkedQueue<int>();
-        stack.Push(1);
-        stack.Push(123);
-        stack.Push(4);
-        stack.Push(3);
-        stack.Pop();
-        Console.WriteLine(stack.Size());
+        static void Main(string[] args)
+        {
+            SingleLinkedList.SingleLinkedList linkedList = new SingleLinkedList.SingleLinkedList();
+            linkedList.InsertFront("hallo");
+            linkedList.InsertFront(123);
+            linkedList.InsertAt(4, 4);
+            linkedList.InsertAt("moin", 0);
+            linkedList.InsertLast(3);
+            linkedList.InsertLast(33);
+            linkedList.printAllNodes();
+            linkedList.DeleteFirst();
+            linkedList.DeleteLast();
+            linkedList.DeleteAt(1);
+            linkedList.printAllNodes();
+            Console.WriteLine(linkedList.First());
+            Console.WriteLine(linkedList.Last());
+        }
     }
-}
