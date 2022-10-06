@@ -17,6 +17,7 @@ namespace SingleLinkedList
             {
                 newNode.nextNode = head;
             }
+
             head = newNode;
         }
 
@@ -46,6 +47,7 @@ namespace SingleLinkedList
                 InsertFront(value);
                 return;
             }
+
             Node currentNode = head;
             Node perviosNode = head;
             int countIndex = 0;
@@ -56,6 +58,7 @@ namespace SingleLinkedList
                     Console.WriteLine(index + " was out of Bounds");
                     return;
                 }
+
                 perviosNode = currentNode;
                 currentNode = currentNode.nextNode;
                 countIndex++;
@@ -77,8 +80,9 @@ namespace SingleLinkedList
             while (currentNode.nextNode != null)
             {
                 previousNode = currentNode;
-                    currentNode = currentNode.nextNode;
+                currentNode = currentNode.nextNode;
             }
+
             previousNode.nextNode = null;
         }
 
@@ -109,23 +113,9 @@ namespace SingleLinkedList
             {
                 currentNode = currentNode.nextNode;
             }
+
             return currentNode.Value;
         }
-
-
-        public void printAllNodes()
-        {
-            Node current = head;
-            String printString = "";
-            while (current != null)
-            {
-                printString += current.Value + "\n";
-                current = current.nextNode;
-            }
-            Console.WriteLine(printString);
-        }
-
-
 
         public int Count()
         {
@@ -136,7 +126,22 @@ namespace SingleLinkedList
                 i++;
                 currentNode = currentNode.nextNode;
             }
+
             return i;
+        }
+
+        public override string ToString()
+        {
+
+            Node current = head;
+            String result = "";
+            while (current != null)
+            {
+                result += current.Value + "\n";
+                current = current.nextNode;
+            }
+
+            return result;
         }
     }
 }

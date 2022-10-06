@@ -5,8 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace SingleLinkedList
-{
-    internal class Node
+{ 
+    public class Node
     {
         public object Value { get; set; }
         public Node nextNode;

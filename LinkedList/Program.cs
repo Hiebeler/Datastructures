@@ -9,11 +9,11 @@
             linkedList.InsertAt("moin", 0);
             linkedList.InsertLast(3);
             linkedList.InsertLast(33);
-            linkedList.printAllNodes();
+            Console.WriteLine(linkedList);
             linkedList.DeleteFirst();
             linkedList.DeleteLast();
             linkedList.DeleteAt(1);
-            linkedList.printAllNodes();
+            Console.WriteLine(linkedList);
             Console.WriteLine(linkedList.First());
             Console.WriteLine(linkedList.Last());
         }
