@@ -56,7 +56,6 @@ namespace UnitTests
             Assert.AreEqual(linkedList.ToString(), "1\n3\n2\n");
         }
 
-
         [Test]
         public void TestLinkedListDeleteNode_AddItemsAndDeleteItems_ListIsCorrect()
         {
