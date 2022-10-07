@@ -9,7 +9,7 @@ namespace SingleLinkedList
     public class Node
     {
         public object Value { get; set; }
-        public Node nextNode;
+        public Node? nextNode;
 
         public Node(object value)
         {
