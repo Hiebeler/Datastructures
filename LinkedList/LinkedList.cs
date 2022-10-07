@@ -62,6 +62,25 @@
             perviosNode.nextNode.nextNode = currentNode;
         }
 
+        public void InsertAfter(Node previousNode, object newData)
+        {
+            Node currentNode = head;
+            while (currentNode != null)
+            {
+                if (currentNode == previousNode)
+                {
+                    Node previousNextNode = currentNode.nextNode;
+                    currentNode.nextNode = new Node(newData);
+                    currentNode.nextNode.nextNode = previousNextNode;
+                } 
+                if (currentNode.nextNode == null)
+                {
+                    return;
+                }
+                currentNode = currentNode.nextNode;
+            }
+        }
+
         public void DeleteFirst()
         {
             head = head.nextNode;
@@ -95,6 +114,36 @@
             perviosNode.nextNode = currentNode.nextNode;
         }
 
+        public bool DeleteNode(Node node)
+        {
+            Node currentNode = head;
+            Node previousNode = head;
+            while (currentNode != null)
+            {
+                if (currentNode == node)
+                {
+                    if (currentNode == head)
+                    {
+                        DeleteFirst();
+                    }
+                    else
+                    {
+                        previousNode.nextNode = currentNode.nextNode;
+                    }
+                    return true;
+                }
+
+                if (currentNode.nextNode == null)
+                {
+                    return false;
+                }
+                previousNode = currentNode;
+                currentNode = currentNode.nextNode;
+            }
+
+            return false;
+        }
+
         public object First()
         {
             return head.Value;
@@ -109,6 +158,25 @@
             }
 
             return currentNode.Value;
+        }
+
+        public Node? GetNode(object data)
+        {
+            Node currentNode = head;
+            while (currentNode != null)
+            {
+                if (currentNode.Value.Equals(data))
+                {
+                    return currentNode;
+                }
+
+                if (currentNode.nextNode == null)
+                {
+                    return null;
+                }
+                currentNode = currentNode.nextNode;
+            }
+            return null;
         }
 
         public int Count()
