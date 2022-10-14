@@ -2,7 +2,7 @@ using System.Linq;
 using NUnit.Framework;
 using SingleLinkedList;
 
-namespace UnitTests
+namespace SingleLinkedListTest
 {
     public class SingleLinkedListTest
     {
