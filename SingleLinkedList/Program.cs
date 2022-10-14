@@ -1,11 +1,11 @@
-﻿    using SingleLinkedList;
+﻿using SingleLinkedList;
 
-    class Program
+class Program
+{
+    static void Main(string[] args)
     {
-        static void Main(string[] args)
-        {
-            SingleLinkedList.SingleLinkedList linkedList = new SingleLinkedList.SingleLinkedList();
-            linkedList.InsertFront("hallo");
+        SingleLinkedList.SingleLinkedList linkedList = new SingleLinkedList.SingleLinkedList();
+        linkedList.InsertFront("hallo");
         linkedList.InsertFront(123);
         /*linkedList.InsertAt(4, 4);
         linkedList.InsertAt("moin", 0);
@@ -23,5 +23,5 @@
         linkedList.InsertAfter(node, "moin");
         linkedList.DeleteNode(node);
         Console.WriteLine(linkedList);
-        }
     }
+}
