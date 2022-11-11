@@ -66,5 +66,31 @@ namespace SingleLinkedListTest
             linkedList.DeleteNode(node);
             Assert.AreEqual(linkedList.ToString(), "2\n");
         }
+
+        [Test]
+        public void TestSwitchNodes_Add2ItemsAndSwitchThem_ItemsAreSwitched()
+        {
+            SingleLinkedList.SingleLinkedList linkedList = new SingleLinkedList.SingleLinkedList();
+            linkedList.InsertFront(1);
+            Node node1 = linkedList.GetNode(1)!;
+            linkedList.InsertLast(2);
+            Node node2 = linkedList.GetNode(2);
+            linkedList.Switch(node1, node2);
+            Assert.AreEqual(linkedList.First(), 2);
+            Assert.AreEqual(linkedList.Last(), 1);
+        }
+
+        [Test]
+        public void TestSwitchNodes_SwitchEmptyList_ListIsEmpty()
+        {
+            SingleLinkedList.SingleLinkedList linkedList = new SingleLinkedList.SingleLinkedList();
+            Node node2 = new Node(2);
+            linkedList.InsertFront(3);
+            linkedList.InsertFront(1);
+            Node node1 = linkedList.GetNode(1);
+            linkedList.Switch(node1, node2);
+            Assert.AreEqual(linkedList.First(), 1);
+            Assert.AreEqual(linkedList.Last(), 3);
+        }
     }
 }
