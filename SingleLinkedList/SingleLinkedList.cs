@@ -192,6 +192,50 @@
             return i;
         }
 
+        public void Switch(Node firstNode, Node secondNode)
+        {
+            if (!Exists(firstNode) || !Exists(secondNode))
+                return;
+            (firstNode.Value, secondNode.Value) = (secondNode.Value, firstNode.Value);
+        }
+
+        public bool Exists(Node node)
+        {
+            Node currentNode = head;
+            if (currentNode == node) return true;
+            while (currentNode != null) 
+            {
+                if (currentNode == node)
+                {
+                    return true;
+                }
+
+                currentNode = currentNode.nextNode;
+            }
+
+            return false;
+        }
+
+        public void InsertionSort()
+        {
+            Node currentNode = head.nextNode;
+            while (currentNode != null)
+            {
+
+                for (var cur = head; cur != null; cur = cur.nextNode)
+                {
+                    if (cur == currentNode)
+                        break;
+                    if ((int)cur.Value < (int)currentNode.Value)
+                        continue;
+                    (cur.Value, currentNode.Value) = (currentNode.Value, cur.Value);
+                    
+                }
+
+                currentNode = currentNode.nextNode;
+            }
+        }
+
         public override string ToString()
         {
 
