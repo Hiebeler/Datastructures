@@ -1,8 +1,12 @@
-﻿namespace SingleLinkedList
+﻿using System.Net.Sockets;
+using Common;
+
+namespace SingleLinkedList
 {
-    public class SingleLinkedList
+    public class SingleLinkedList : IMyList
     {
         private Node head;
+        private SortStrategy sortStrategy;
 
         public void InsertFront(object value)
         {
@@ -144,12 +148,12 @@
             return false;
         }
 
-        public object First()
+        public Node First()
         {
-            return head.Value;
+            return head;
         }
 
-        public object Last()
+        public Node Last()
         {
             Node currentNode = head;
             while (currentNode.nextNode != null)
@@ -157,7 +161,7 @@
                 currentNode = currentNode.nextNode;
             }
 
-            return currentNode.Value;
+            return currentNode;
         }
 
         public Node? GetNode(object data)
@@ -192,7 +196,7 @@
             return i;
         }
 
-        public void Switch(Node firstNode, Node secondNode)
+        public void SwitchNode(Node firstNode, Node secondNode)
         {
             if (!Exists(firstNode) || !Exists(secondNode))
                 return;
@@ -251,6 +255,16 @@
 
                 currentNode = currentNode.nextNode;
             }
+        }
+
+        public void SetSortStrategy(SortStrategy _sortStrategy)
+        {
+            sortStrategy = _sortStrategy;
+        }
+
+        public void Sort()
+        {
+            sortStrategy.Sort(this);
         }
 
         public override string ToString()

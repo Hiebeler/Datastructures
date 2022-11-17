@@ -1,4 +1,5 @@
-﻿using SingleLinkedList;
+﻿using Common;
+using SingleLinkedList;
 
 class Program
 {
@@ -40,7 +41,8 @@ class Program
         linkedList.InsertFront(12);
         linkedList.InsertFront(24);
         linkedList.InsertFront(22);
-        linkedList.InsertionSortReverse();
+        linkedList.SetSortStrategy(new InsertionSortReverse());
+        linkedList.Sort();
         Console.WriteLine(linkedList);
     }
 }
