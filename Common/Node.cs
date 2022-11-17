@@ -1,20 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿namespace Common;
 
-namespace SingleLinkedList
-{ 
-    public class Node
+public class Node
+{
+    public Node? nextNode;
+
+    public Node(object value)
     {
-        public object Value { get; set; }
-        public Node? nextNode;
-
-        public Node(object value)
-        {
-            nextNode = null;
-            Value = value;
-        }
+        nextNode = null;
+        Value = value;
     }
+
+    public object Value { get; set; }
 }

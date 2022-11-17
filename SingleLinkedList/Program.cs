@@ -1,11 +1,10 @@
 ﻿using Common;
-using SingleLinkedList;
 
-class Program
+internal class Program
 {
-    static void Main(string[] args)
+    private static void Main(string[] args)
     {
-        SingleLinkedList.SingleLinkedList linkedList = new SingleLinkedList.SingleLinkedList();
+        var linkedList = new SingleLinkedList.SingleLinkedList();
         /*linkedList.InsertFront("hallo");
         linkedList.InsertFront(12121231233);
         linkedList.InsertFront(123);
