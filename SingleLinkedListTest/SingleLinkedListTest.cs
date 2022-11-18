@@ -92,5 +92,50 @@ namespace SingleLinkedListTest
             Assert.AreEqual(linkedList.First(), 1);
             Assert.AreEqual(linkedList.Last(), 3);
         }
+
+        [Test]
+        public void TestInsertionSort_AddSomeIntsAndSortThem_ListIsSortedCorrect()
+        {
+            SingleLinkedList.SingleLinkedList linkedList = new SingleLinkedList.SingleLinkedList();
+            linkedList.InsertFront(3);
+            linkedList.InsertFront(1);
+            linkedList.InsertLast(2);
+            linkedList.InsertionSort();
+            Assert.AreEqual(linkedList.First(), 1);
+            Assert.AreEqual(linkedList.GetNode(1).nextNode.Value, 2);
+            Assert.AreEqual(linkedList.Last(), 3);
+        }
+
+        [Test]
+        public void TestInsertionSortReverse_AddSomeIntsAndReverseSortThem_ListIsSortedInReverse()
+        {
+            SingleLinkedList.SingleLinkedList linkedList = new SingleLinkedList.SingleLinkedList();
+            linkedList.InsertFront(3);
+            linkedList.InsertFront(1);
+            linkedList.InsertLast(2);
+            linkedList.InsertionSortReverse();
+            Assert.AreEqual(linkedList.First(), 3);
+            Assert.AreEqual(linkedList.GetNode(3).nextNode.Value, 2);
+            Assert.AreEqual(linkedList.Last(), 1);
+        }
+
+        [Test]
+        public void TestInsertionSortReverse_AddMultipleSimilareIntsAndSortThem_ListIsSortedInReverse()
+        {
+            SingleLinkedList.SingleLinkedList linkedList = new SingleLinkedList.SingleLinkedList();
+            linkedList.InsertFront(1);
+            linkedList.InsertLast(2);
+            linkedList.InsertFront(3);
+            linkedList.InsertFront(3);
+            linkedList.InsertLast(4);
+            linkedList.InsertionSortReverse();
+            Assert.AreEqual(linkedList.First(), 4);
+            Assert.AreEqual(linkedList.GetNode(4).nextNode.Value, 3);
+            Assert.AreEqual(linkedList.GetNode(4).nextNode.nextNode.Value, 3);
+            Assert.AreEqual(linkedList.GetNode(4).nextNode.nextNode.nextNode.Value, 2);
+            Assert.AreEqual(linkedList.Last(), 1);
+        }
+
+
     }
 }

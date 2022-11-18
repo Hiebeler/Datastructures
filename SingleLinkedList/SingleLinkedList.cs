@@ -218,6 +218,16 @@
 
         public void InsertionSort()
         {
+            insertionSort(false);
+        }
+
+        public void InsertionSortReverse()
+        {
+            insertionSort(true);
+        }
+
+        private void insertionSort(bool reverse)
+        {
             Node currentNode = head.nextNode;
             while (currentNode != null)
             {
@@ -226,10 +236,17 @@
                 {
                     if (cur == currentNode)
                         break;
-                    if ((int)cur.Value < (int)currentNode.Value)
-                        continue;
+                    if (reverse)
+                    {
+                        if ((int)cur.Value > (int)currentNode.Value)
+                            continue;
+                    }
+                    else
+                    {
+                        if ((int)cur.Value < (int)currentNode.Value)
+                            continue;
+                    }
                     (cur.Value, currentNode.Value) = (currentNode.Value, cur.Value);
-                    
                 }
 
                 currentNode = currentNode.nextNode;

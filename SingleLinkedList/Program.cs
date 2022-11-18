@@ -40,7 +40,7 @@ class Program
         linkedList.InsertFront(12);
         linkedList.InsertFront(24);
         linkedList.InsertFront(22);
-        linkedList.InsertionSort();
+        linkedList.InsertionSortReverse();
         Console.WriteLine(linkedList);
     }
 }
