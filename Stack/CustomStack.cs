@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Common;
+using SingleLinkedList;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,25 +8,27 @@ using System.Threading.Tasks;
 
 namespace Stack
 {
-    public class CustomStack<T>
+    public class MyStack
     {
-   
-            List<Node> list = new List<Node>();
+        private SingleLinkedList.SingleLinkedList internalList = new SingleLinkedList.SingleLinkedList();
 
-            public void push(Node item)
-            {
-                list.Add(item);
-            }
+        public object Push(object argValue)
+        {
+            internalList.InsertLast(argValue);
+            return argValue;
+        }
 
-            public void pop()
-            {
-                list.RemoveAt(list.Count - 1);
-            }
+        public Node Pop()
+        {
+            var retval = internalList.Last();
+            internalList.DeleteLast();
+            return retval;
+        }
 
-            public int size()
-            {
-                return list.Count();
-            }
-        
+        public override string ToString()
+        {
+            return internalList.ToString();
+        }
+
     }
 }
