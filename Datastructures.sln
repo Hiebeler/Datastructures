@@ -15,7 +15,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SingeltonPattern", "Singelt
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Common", "Common\Common.csproj", "{C933BE73-03AF-44A7-8B93-54089A96EA25}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SortAlgorithmTest", "SortAlgorithmTest\SortAlgorithmTest.csproj", "{B7E5D861-2ED9-47EB-A02D-07C671490CC8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SortAlgorithmTest", "SortAlgorithmTest\SortAlgorithmTest.csproj", "{B7E5D861-2ED9-47EB-A02D-07C671490CC8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StackUnitTests", "StackUnitTests\StackUnitTests.csproj", "{0478932E-0743-4882-B9B7-54954BD0852D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +53,10 @@ Global
 		{B7E5D861-2ED9-47EB-A02D-07C671490CC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B7E5D861-2ED9-47EB-A02D-07C671490CC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B7E5D861-2ED9-47EB-A02D-07C671490CC8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0478932E-0743-4882-B9B7-54954BD0852D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0478932E-0743-4882-B9B7-54954BD0852D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0478932E-0743-4882-B9B7-54954BD0852D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0478932E-0743-4882-B9B7-54954BD0852D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
