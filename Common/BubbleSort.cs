@@ -10,7 +10,6 @@ public class BubbleSort : SortStrategy
 {
     public override void Sort(IMyList list)
     {
-        var currentNode = list.First();
         bool sorted = false;
         while (!sorted)
         {
@@ -23,7 +22,6 @@ public class BubbleSort : SortStrategy
                     sorted = false;
                 }
             }
-            currentNode = currentNode.nextNode;
         }
     }
 }
