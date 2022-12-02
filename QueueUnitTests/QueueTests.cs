@@ -15,7 +15,7 @@ namespace QueueUnitTests
             stack.Enqueue(1);
             stack.Enqueue(2);
             stack.Enqueue(3);
-            Assert.AreEqual(stack.ToString(), "3\n2\n1\n");
+            Assert.AreEqual(stack.ToString(), "1\n2\n3\n");
         }
 
         [Test]
@@ -26,8 +26,8 @@ namespace QueueUnitTests
             stack.Enqueue(2);
             stack.Enqueue(3);
             var last = stack.Dequeue();
-            Assert.AreEqual(last.Value, 3);
-            Assert.AreEqual(stack.ToString(), "2\n1\n");
+            Assert.AreEqual(last.Value, 1);
+            Assert.AreEqual(stack.ToString(), "2\n3\n");
         }
     }
 }

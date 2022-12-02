@@ -13,7 +13,7 @@ namespace MyQueue
 
         public object Enqueue(object argValue)
         {
-            internalList.InsertFront(argValue);
+            internalList.InsertLast(argValue);
             return argValue;
         }
 
