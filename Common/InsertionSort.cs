@@ -8,13 +8,17 @@ namespace Common;
 
 public class InsertionSort : SortStrategy
 {
-    private bool reverse;
-    public InsertionSort(bool _reverse)
+    public override void Sort(IMyList list)
     {
-        reverse = _reverse;
+        insertionSort(list, false);
     }
 
-    public override void Sort(IMyList list)
+    public override void SortDescending(IMyList list)
+    {
+        insertionSort(list, true);
+    }
+
+    private void insertionSort(IMyList list, bool reverse)
     {
         var currentNode = list.First().nextNode;
         while (currentNode != null)
@@ -33,6 +37,7 @@ public class InsertionSort : SortStrategy
                     if ((int)cur.Value < (int)currentNode.Value)
                         continue;
                 }
+
                 (cur.Value, currentNode.Value) = (currentNode.Value, cur.Value);
             }
 
