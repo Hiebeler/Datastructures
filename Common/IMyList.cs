@@ -8,4 +8,5 @@ public interface IMyList
     void SetSortStrategy(SortStrategy sortStrategy);
     Node First();
     void Sort();
+    void SortDescending();
 }

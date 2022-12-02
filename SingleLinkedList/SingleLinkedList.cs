@@ -29,6 +29,11 @@ public class SingleLinkedList : IMyList
         sortStrategy.Sort(this);
     }
 
+    public void SortDescending()
+    {
+        sortStrategy.SortDescending(this);
+    }
+
     public void InsertFront(object value)
     {
         var newNode = new Node(value);
