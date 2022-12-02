@@ -15,7 +15,7 @@ namespace Common
 
         public override void SortDescending(IMyList list)
         {
-
+            selectionSort(list, true);
         }
 
         private void selectionSort(IMyList list, bool descending)
@@ -23,9 +23,9 @@ namespace Common
             for (var cur = list.First(); cur.nextNode != null; cur = cur.nextNode)
             {
                 Node minNode = cur;
-                for (var innerCur = cur; innerCur.nextNode != null; innerCur = innerCur.nextNode)
+                for (var innerCur = cur; innerCur != null; innerCur = innerCur.nextNode)
                 {
-                    if ((int) innerCur.Value < (int) minNode.Value)
+                    if ((descending && (int) innerCur.Value > (int) minNode.Value) || (!descending && (int)innerCur.Value > (int)minNode.Value))
                         minNode = innerCur;
                 }
 
