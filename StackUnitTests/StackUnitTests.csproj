@@ -19,6 +19,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\MyQueue\MyQueue.csproj" />
     <ProjectReference Include="..\Stack\Stack.csproj" />
   </ItemGroup>
 
