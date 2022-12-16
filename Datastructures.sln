@@ -17,11 +17,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Common", "Common\Common.csp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SortAlgorithmTest", "SortAlgorithmTest\SortAlgorithmTest.csproj", "{B7E5D861-2ED9-47EB-A02D-07C671490CC8}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StackUnitTests", "StackUnitTests\StackUnitTests.csproj", "{0478932E-0743-4882-B9B7-54954BD0852D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DatastructurTests", "StackUnitTests\DatastructurTests.csproj", "{0478932E-0743-4882-B9B7-54954BD0852D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyQueue", "MyQueue\MyQueue.csproj", "{EED0B959-B442-4158-9A17-545647D3A4D4}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QueueUnitTests", "QueueUnitTests\QueueUnitTests.csproj", "{02FED0E1-1ECF-4F97-9D16-2E42A564D8BB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyQueue", "MyQueue\MyQueue.csproj", "{EED0B959-B442-4158-9A17-545647D3A4D4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -65,10 +63,6 @@ Global
 		{EED0B959-B442-4158-9A17-545647D3A4D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EED0B959-B442-4158-9A17-545647D3A4D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EED0B959-B442-4158-9A17-545647D3A4D4}.Release|Any CPU.Build.0 = Release|Any CPU
-		{02FED0E1-1ECF-4F97-9D16-2E42A564D8BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{02FED0E1-1ECF-4F97-9D16-2E42A564D8BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{02FED0E1-1ECF-4F97-9D16-2E42A564D8BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{02FED0E1-1ECF-4F97-9D16-2E42A564D8BB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
