@@ -25,7 +25,7 @@ namespace Common
                 Node minNode = cur;
                 for (var innerCur = cur; innerCur != null; innerCur = innerCur.nextNode)
                 {
-                    if ((descending && (int) innerCur.Value > (int) minNode.Value) || (!descending && (int)innerCur.Value > (int)minNode.Value))
+                    if ((descending && (int) innerCur.Value > (int) minNode.Value) || (!descending && (int)innerCur.Value < (int)minNode.Value))
                         minNode = innerCur;
                 }
 
