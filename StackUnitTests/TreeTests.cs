@@ -69,8 +69,22 @@ namespace DatastructurTests
             tree.Add(-1);
             tree.Add(2);
             tree.Add(1);
-            //tree.Delete(3);
-            Assert.AreEqual(tree.ToString(), "981213161530205");
+            tree.Delete(3);
+            Assert.AreEqual(tree.ToString(), "-110425");
+        }
+
+        [Test]
+        public void Delete_DeleteMiddleNodeManyChildren2_DeletedMiddleNode()
+        {
+            BinaryTree tree = new BinaryTree();
+            tree.Add(6);
+            tree.Add(3);
+            tree.Add(8);
+            tree.Add(2);
+            tree.Add(9);
+            tree.Add(7);
+            tree.Delete(8);
+            Assert.AreEqual(tree.ToString(), "23976");
         }
     }
 }

@@ -99,6 +99,10 @@ namespace Tree
                     nodeToReplace = nodeToDelete.right;
                 setPrevChildNode(nodeToDelete, nodeToReplace);
             }
+            else
+            {
+                deleteMiddleNodeWithTwoChilds(nodeToDelete);
+            }
         }
 
         private void setPrevChildNode(Node startNode, Node? replaceNode)
@@ -112,18 +116,6 @@ namespace Tree
                 if (prevNode.right.Data == startNode.Data)
                     prevNode.right = replaceNode;
         }
-
-        private Node getRightLeaf(Node node)
-        {
-            while (node.right != null)
-            {
-                node = node.right;
-            }
-
-            return node;
-        }
-
-
 
         private Node getPreviousNode(Node node)
         {
@@ -146,6 +138,34 @@ namespace Tree
                     curNode = curNode.right;
                 }
             }
+        }
+
+        private void deleteMiddleNodeWithTwoChilds(Node nodeToDelete)
+        {
+            Node leftSmallestNode = getLeftSmallestNode(nodeToDelete);
+            if (leftSmallestNode == nodeToDelete.left)
+            {
+                nodeToDelete.Data = leftSmallestNode.Data;
+                nodeToDelete.left = null;
+                return;
+            }
+            Node prevSmallstNode = getPreviousNode(leftSmallestNode);
+            nodeToDelete.Data = leftSmallestNode.Data;
+            if (leftSmallestNode.isLeaf())
+                prevSmallstNode.right = null;
+            else
+                prevSmallstNode.right = leftSmallestNode.left;
+        }
+
+        private Node getLeftSmallestNode(Node startNode)
+        {
+            Node curNode = startNode.left;
+            while (curNode.right != null)
+            {
+                curNode = curNode.right;
+            }
+
+            return curNode;
         }
 
         public override string ToString()
