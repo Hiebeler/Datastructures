@@ -6,6 +6,7 @@ namespace SortAlgorithmTest
 {
     public class BubbleSortTest
     {
+        private SortFactory sortFactory = new SortFactory();
         [SetUp]
         public void Setup()
         {
@@ -18,7 +19,7 @@ namespace SortAlgorithmTest
             linkedList.InsertFront(3);
             linkedList.InsertFront(1);
             linkedList.InsertLast(2);
-            linkedList.SetSortStrategy(new BubbleSort());
+            linkedList.SetSortStrategy(sortFactory.SortStrategyFactory("Bubble Sort"));
             linkedList.Sort();
             Assert.AreEqual(linkedList.ToString(), "1\n2\n3\n");
         }

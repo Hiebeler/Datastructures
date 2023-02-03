@@ -21,6 +21,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DatastructurTests", "StackU
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyQueue", "MyQueue\MyQueue.csproj", "{EED0B959-B442-4158-9A17-545647D3A4D4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tree", "Tree\Tree.csproj", "{8DD31A90-9A6D-4F50-A15A-50E0FD338557}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +65,10 @@ Global
 		{EED0B959-B442-4158-9A17-545647D3A4D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EED0B959-B442-4158-9A17-545647D3A4D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EED0B959-B442-4158-9A17-545647D3A4D4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8DD31A90-9A6D-4F50-A15A-50E0FD338557}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8DD31A90-9A6D-4F50-A15A-50E0FD338557}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8DD31A90-9A6D-4F50-A15A-50E0FD338557}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8DD31A90-9A6D-4F50-A15A-50E0FD338557}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
