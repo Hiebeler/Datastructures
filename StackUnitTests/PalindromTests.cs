@@ -47,6 +47,12 @@ public class PalindromTests
     }
     
     [Test]
+    public void Palindrom_TryWithOddCount_ReturnsTrue()
+    {
+        Assert.IsTrue(Palindrom.IsPalindrom("AN2NA"));
+    }
+    
+    [Test]
     public void Palindrom_WrongCase_ReturnsFalse()
     {
         Assert.IsFalse(Palindrom.IsPalindrom("OtTo"));
