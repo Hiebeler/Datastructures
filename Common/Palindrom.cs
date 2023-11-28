@@ -8,9 +8,7 @@ public class Palindrom
         int iterations = (int)Math.Ceiling((decimal)palindromStack.Count / 2);
         for (int i = 0; i < iterations; i++)
         {
-            char z = palindromStack.Pop();
-            char t = palindrom[i];
-            if (z != palindrom[i])
+            if (palindromStack.Pop() != palindrom[i])
             {
                 return false;
             }
